@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Realm Webstore</title>
+    <script src="https://kit.fontawesome.com/3a3e3b7b30.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ADEFD1;
+            /* Set a light gray background color for the body */
+        }
+
+        .topbar {
+            background-color: #00203F;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 40px;
+        }
+
+        #copyText,
+        .discord {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .discord a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Basic styling for the navbar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Styling for the links */
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for links */
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        /* Style for the right div */
+        .right {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style for the store button */
+        .store-button {
+            background-color: yellow;
+            padding: 10px;
+            width: 120px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for the store button */
+        .store-button:hover {
+            background-color: #ffd700;
+        }
+
+        /* Style for the store link */
+        .store-button a {
+            color: black;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        /* Icon style */
+        .store-button i {
+            margin-right: 5px;
+        }
+
+        .bold-text {
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+        }
+
+        .card-container {
+            display: flex;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            gap: 300px   ;
+
+
+        }
+
+        .card {
+            width: 880px;
+            height: 810px;
+            background-color: #3D3737;
+            /* Set a gray background color for the card */
+            margin-left: 50px;
+            padding: 20px;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #ffffff;
+            /* Set white text color */
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            color: yellow;
+            padding: 2px;
+        }
+
+        .headline {
+            font-size: 80px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .date {
+            font-size: 14px;
+            margin-left: 10px;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-size: 60px;
+        }
+
+        .paragraph {
+            font-size: 40px;
+            padding: 20px;
+            margin: 0px 30px;
+
+        }
+
+        .card1 {
+            width: 280px;
+            height: 345px;
+            background-color: #3D3737;
+            /* Set a gray background color for the card */
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            flex-direction: column;
+       
+            color: #ffffff;
+            /* Set white text color */
+        }
+
+        .header1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            color: yellow;
+            padding: 2px;
+        }
+
+        .headline1 {
+            font-size: 26px;
+            font-weight: bold;
+            padding: 10px 20px;
+            align-items: center;
+        }
+
+
+        .paragraph1 {
+            font-size: 20px;
+            padding: 2px 10px;
+            margin: 0px 30px;
+
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            
+        }
+        h2 {
+            color: #333;
+
+        }
+        ul {
+            list-style-type: none;
+            
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="logo">
+            <img src="/img/logo.png" alt="Unity Real Webstore">
+        </div>
+        <div class="info">
+            <div class="ip">
+
+                <button onclick="copyToClipboard()" id="copyText"
+                    style="background-color: black; color: white; padding: 20px;">play.unityrealm.fun</button>
+
+
+            </div>
+            <div class="discord">
+                <button style="background-color: black; color: white; padding: 20px;"><a href="https://discord.gg/unityrealms">Join Our Discord!
+                    </a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <!-- Left div with links -->
+        <div class="left">
+            <a href="/index.html">Home</a>
+            <a href="/vote.html">Vote</a>
+            <a href="/staff.html">Staff</a>
+            <a href="/rules.html">Rules</a>
+        </div>
+
+        <!-- Right div with store button -->
+        <div class="right">
+            <button class="store-button">
+                <a href="/store.html">
+                    <i class="fas fa-shopping-cart"></i>Store
+                </a>
+            </button>
+        </div>
+    </div>
+    <p class="bold-text">Community Guidelines</p>
+    
+    <div style="align-items: center; justify-content: center; padding: 0px 100px;">
+        <p>Welcome to our community! To ensure a positive and enjoyable experience for all members, we have established the following guidelines:</p>
+
+        <ol>
+            <li>
+                <strong>No Unauthorized Access (Hacking):</strong>
+                <ul>
+                    <li>Respect the integrity of the system.</li>
+                    <li>Refrain from unauthorized access or manipulation.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>No Unfair Advantages (X-Ray, Mods Making Grind Easy, Duping):</strong>
+                <ul>
+                    <li>Maintain fair play by avoiding the use of X-ray, mods that ease gameplay, or any form of item duplication.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Respectful Behavior (No Abusing, No Rough Words):</strong>
+                <ul>
+                    <li>Foster a positive community by treating others with respect.</li>
+                    <li>Refrain from using abusive language.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>No Unauthorized Modifications (Meteor Clients, Mods):</strong>
+                <ul>
+                    <li>Use only authorized and allowed modifications.</li>
+                    <li>Unauthorized clients or mods are not permitted.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>No Promotion Without Approval:</strong>
+                <ul>
+                    <li>Seek permission before promoting any content or external links.</li>
+                    <li>Help maintain the focus on the community's main objectives.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    
+
+
+ 
+    <footer style="background-color: #3D3737; padding: 10px; text-align: center; height: 20px; margin-top: 40px;">
+        <div style="float: left;">&copy; Unity Realm</div>
+        <div style="float: right;">Designed by: bhattprayas</div>
+    </footer>
+
+    <script>
+        function copyToClipboard() {
+            // Create a temporary element (in this case, a paragraph) to hold the text
+            const copyTextElement = document.getElementById('copyText');
+
+            // Create a range object to select the text
+            const range = document.createRange();
+            range.selectNode(copyTextElement);
+
+            // Select the text content
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+
+            // Copy the selected text to the clipboard
+            document.execCommand('copy');
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
